@@ -1,26 +1,95 @@
-# Features
+# devtron
 
-  * **Require graph** to help you visualize your app's internal and external
-    library dependencies in both the main and renderer processes.
-  * **IPC monitor** to track and inspect the messages sent and received
-    between the renderer and main processes in your app.
-  * **Event inspector** that shows the events and listeners that are registered
-    in your app on the core Electron APIs such as the window, the app, and the
-    processes.
-  * **App Linter** that checks your apps for possible issues and missing
-    functionality.
+Devtron is a browser-based accessibility inspection and developer tool extension.  
+It helps developers analyze web applications for accessibility issues and inspect DOM elements directly from structured accessibility reports.
 
-# Installing
+The project is built with JavaScript and packaged as a browser extension.
 
-```sh
-npm install --save-dev devtron
+---
+
+## Features
+
+- Accessibility inspection tools
+- Element highlighting and DOM inspection
+- Integration with accessibility reporting
+- Browser extension packaging
+- Automated test support
+- CI configuration (Travis, AppVeyor)
+
+---
+
+## Tech Stack
+
+- JavaScript
+- Node.js
+- Browser Extension APIs
+- Accessibility Developer Tools (integration)
+- Travis CI / AppVeyor
+
+---
+
+## Installation (Development)
+
+Clone the repository:
+
+```bash
+git clone https://github.com/<your-username>/devtron.git
+cd devtron
 ```
 
-Then execute the following from the Console tab of your running Electron app's
-developer tools:
+Install dependencies:
 
-```js
-require('devtron').install()
+```bash
+npm install
 ```
 
-You should then see a `Devtron` tab added.
+---
+
+## Build
+
+Build the project:
+
+```bash
+npm run build
+```
+
+The compiled output will typically be placed in the `out/` directory.
+
+---
+
+## Running as a Browser Extension
+
+1. Build the project.
+2. Open your browser’s extension management page.
+3. Enable **Developer Mode**.
+4. Load the extension from the `out/` directory.
+
+---
+
+## Testing
+
+Run tests:
+
+```bash
+npm test
+```
+
+---
+
+## Project Structure
+
+- `lib/` – Core extension logic  
+- `static/` – Static assets  
+- `vendor/` – Third-party dependencies  
+- `test/` – Test files  
+- `manifest.json` – Extension configuration  
+- `api.js` – Extension API logic  
+
+---
+
+## Requirements
+
+- Node.js (version defined in `.node-version`)
+- npm
+
+---
